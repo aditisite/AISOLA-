@@ -82,7 +82,6 @@ print(df)
 
 import seaborn as sns
 sns.set(rc={'figure.figsize':(8,6)})
-df['cluster'] = df.cluster.map( {'Keinupuitso_nearbyarea':'Place1' , 'Hervantakeskus':'Place10' ,'Other_area':'Place11','PRISMA':'Place2','Lidl_lakalaiva':'Place3','Peltolammi':'Place6','Lielahti':'Place4','Kaukajärvi':'Place5','Tesoma':'Place7','Hervanta':'Place8','Kauppi':'Place9','Kaleva':'Place12','Ratina':'Place14','Keskustori':'Place13'})
 df['User'] = pd.Series(df['User'], dtype="string")
 print(df)
 
