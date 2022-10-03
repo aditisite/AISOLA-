@@ -128,7 +128,7 @@ map.save("C:\\Users\\chadsi\\OneDrive - TUNI.fi\\Documents\\Doctoral Studies\\Im
 
 
 #Based on google maps specifying the tentative names of the location where user is frequently visitinh (Only for Understanding)
-User1['cluster_name'] = User1.cluster.map( {0:'Keinupuitso_nearbyarea',1:'PRISMA' ,2:'Lidl_lakalaiva' } )
+User1['cluster_name'] = User1.cluster.map( {0:'Place_1',1:'Place_2' ,2:'Place_3' } )
 print(User1)
 
 # Using sklearn data is scaled and visualized in x and y km
@@ -218,7 +218,7 @@ map
 map.save("C:\\Users\\chadsi\\OneDrive - TUNI.fi\\Documents\\Doctoral Studies\\Implementation plan\\Ppaer3_AISOLA_Dec21\\Diagrams and charts\\outdoor maps\\User2Cluster.html")
 
 
-User2['cluster_name'] = User2.cluster.map( {0:'Keinupuitso_nearbyarea' , 1:'Lielahti', 2:'Tesoma', 3:'Peltolammi', 4:'Kaukajärvi'} )
+User2['cluster_name'] = User2.cluster.map( {0:'Place_1' , 1:'Place_4', 2:'Place_5', 3:'Place_6', 4:'Place_7'} )
 print(User2)
 
 # Using sklearn
@@ -302,7 +302,7 @@ for _, row in User3.iterrows():
 map
 map.save("C:\\Users\\chadsi\\OneDrive - TUNI.fi\\Documents\\Doctoral Studies\\Implementation plan\\Ppaer3_AISOLA_Dec21\\Diagrams and charts\\outdoor maps\\User3Cluster.html")
 
-User3['cluster_name'] = User3.cluster.map( {0:'Hervanta' , 1:'Kauppi', 2:'Keinupuitso_nearbyarea'} )
+User3['cluster_name'] = User3.cluster.map( {0:'Place_8' , 1:'Place_9', 2:'Place_1'} )
 print(User3)
 
 # Using sklearn
@@ -381,7 +381,7 @@ for _, row in User4.iterrows():
     ).add_to(map)
 map
 map.save("C:\\Users\\chadsi\\OneDrive - TUNI.fi\\Documents\\Doctoral Studies\\Implementation plan\\Ppaer3_AISOLA_Dec21\\Diagrams and charts\\outdoor maps\\User4Cluster.html")
-User4['cluster_name'] = User4.cluster.map( {0:'Keinupuitso_nearbyarea' , 1:'Kauppi', 2:'Hervantakeskus'} )
+User4['cluster_name'] = User4.cluster.map( {0:'Place_1' , 1:'Place_9', 2:'Place_10'} )
 print(User4)
 
 # Using sklearn
@@ -465,10 +465,10 @@ for _, row in User6.iterrows():
 map
 map.save("C:\\Users\\chadsi\\OneDrive - TUNI.fi\\Documents\\Doctoral Studies\\Implementation plan\\Ppaer3_AISOLA_Dec21\\Diagrams and charts\\outdoor maps\\User6Cluster.html")
 
-User6['cluster_name'] = User6.cluster.map( {0:'Keinupuitso_nearbyarea' , 15:'Hervantakeskus',1:'Other_area',2:'Other_area',3:'Other_area',4:'Other_area',7:'Other_area',6:'Other_area',8:'Other_area',5:'Other_area',10:'Other_area',11:'Other_area',12:'Other_area',13:'Other_area',14:'Other_area',9:'Other_area'} )
+User6['cluster_name'] = User6.cluster.map( {0:'Place_1' , 15:'Place_10',1:'Other_area',2:'Other_area',3:'Other_area',4:'Other_area',7:'Other_area',6:'Other_area',8:'Other_area',5:'Other_area',10:'Other_area',11:'Other_area',12:'Other_area',13:'Other_area',14:'Other_area',9:'Other_area'} )
 User6
 
-User6['cluster'] = User6.cluster_name.map( {'Keinupuitso_nearbyarea':0 , 'Hervantakeskus':1 ,'Other_area':2} )
+User6['cluster'] = User6.cluster_name.map( {'Place_1':0 , 'Place_10':1 ,'Place_11':2} )
 
 import folium
 colors = ['red','blue','green']
@@ -569,10 +569,10 @@ for _, row in User7.iterrows():
 map
 map.save("C:\\Users\\chadsi\\OneDrive - TUNI.fi\\Documents\\Doctoral Studies\\Implementation plan\\Ppaer3_AISOLA_Dec21\\Diagrams and charts\\outdoor maps\\User7Cluster.html")
 
-User7['cluster_name'] = User7.cluster.map( {0:'Keinupuitso_nearbyarea' , 4:'Hervantakeskus',5:'Hervantakeskus',1:'Other_area',6:'Other_area',2:'Kaleva',3:'Keskustori',7:'Ratina'})
+User7['cluster_name'] = User7.cluster.map( {0:'Place_1' , 4:'Place_10',5:'Place_10',1:'Other_area',6:'Other_area',2:'Place_12',3:'Place_13',7:'Place_14'})
 User7
 
-User7['cluster'] = User7.cluster_name.map( {'Keinupuitso_nearbyarea':0 , 'Hervantakeskus':1 ,'Other_area':2,'Kaleva':3,'Keskustori':4,'Ratina':5})
+User7['cluster'] = User7.cluster_name.map( {'Place_0':0 , 'Place_10':1 ,'Place_11':2,'Place_12':3,'Place_13':4,'Place_14':5})
 print(User7)
 
 import folium
@@ -679,7 +679,7 @@ User7F['Lubben'] = '9'
 User_combined = pd.concat([User1F, User2F,User3F,User4F,User6F,User7F], axis=0)
 User_combined['UCLA'] = pd.Series(User_combined['UCLA'], dtype="int64")
 User_combined['Lubben'] = pd.Series(User_combined['Lubben'], dtype="int64")
-User_combined['cluster'] = User_combined.cluster_name.map( {'Keinupuitso_nearbyarea':0 , 'Hervantakeskus':1 ,'Other_area':2,'PRISMA':3,'Lidl_lakalaiva':4,'Peltolammi':5,'Lielahti':6,'Kaukajärvi':7,'Tesoma':8,'Hervanta':9,'Kauppi':10,'Kaleva':11,'Ratina':12,'Keskustori':13})
+User_combined['cluster'] = User_combined.cluster_name.map( {'Place_1':0 , 'Place_10':1 ,'Place_11':2,'Place_2':3,'Place_3':4,'Place_6':5,'Place_4':6,'Place_7':7,'Place_5':8,'Place_8':9,'Place_9':10,'Place_12':11,'Place_14':12,'Place_13':13})
 User_combined
 
 
